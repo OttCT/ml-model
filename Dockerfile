@@ -10,8 +10,8 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 
 # Expose port and run the application when the container is started
-EXPOSE 9999:9999
-ENTRYPOINT python flask_api.py 9999
+EXPOSE 8080
+ENTRYPOINT python flask_api.py 8080
 
 # docker build -t "<app name>" .
 # docker run ml_app -p 9999 # to make the port externally avaiable for browsers
