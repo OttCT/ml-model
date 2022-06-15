@@ -17,7 +17,7 @@ def predict():
         vectorizer = pickle.load(open('vectorizer.pk', 'rb'))  # load CountVectorizer for preprocessing text
         model = pickle.load(open('model.pkl', 'rb'))           # load model for prediction
 
-        # json example: [{"tweet":"Neka peva ova kuca"}, {"tweet":"Sta ce mi zivot"}, ...]
+        # json example: [{"tweet":"Mike Pence: “Allowing Rape Victims To Have Abortions Will Lead To Women Trying To Get Raped"}, {"tweet":"BREAKING: Hillary Clinton Killed In Monster Truck Mishap"}]
         text = pd.DataFrame(json)
         text = vectorizer.transform(text['tweet'])
 

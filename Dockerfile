@@ -14,7 +14,9 @@ EXPOSE 8080
 ENTRYPOINT python flask_api.py 8080
 
 # docker build -t "<app name>" .
-# docker run ml_app -p 9999 # to make the port externally avaiable for browsers
+# docker run -d -p 8081:8080 ml_app # to make the port externally avaiable for browsers
+
+# POSTMAN post call: localhost:8081/predict
 
 # open bash in a running docker container
 # docker exec -ti <containerid> bash
